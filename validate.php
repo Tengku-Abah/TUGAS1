@@ -1,14 +1,3 @@
-<!-- 
- Ambil data dari $_POST.
-Jalankan validasi sesuai syarat tugas:
-Username huruf aja.
-Email ada @ dan domain.
-Password ≥ 8 karakter, ada huruf besar, kecil, angka.
-(Hobi bisa kosong atau banyak, prodi radio button, perguruan tinggi bebas).
-Kalau ada error → echo "<script>alert('Pesan error')</script>"; lalu redirect balik ke form.
-Kalau semua valid → redirect ke result.php sambil oper data (misalnya via $_SESSION atau kirim ulang pakai POST).
-  -->
-
 <?php
 $username = $_POST['username'];
 $email = $_POST['email'];
