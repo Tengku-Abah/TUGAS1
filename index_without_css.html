@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Sign On Form</title>
+</head>
+<body>
+  <form action="validasi.php" method="POST">
+    <table border="1" cellpadding="8" cellspacing="0">
+      <tr>
+        <th colspan="2">Student Sign On Form</th>
+      </tr>
+      <tr>
+        <td>Username:</td>
+        <td>
+          <input type="text" name="username" required>
+          <br><small>Username tidak boleh mengandung angka</small>
+        </td>
+      </tr>
 
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input type="email" name="email" required>
+          <br><small>Email harus mengandung '@' diikuti dengan domain name</small>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Perguruan Tinggi:</td>
+        <td>
+          <input type="text" name="universitas" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Program Studi:</td>
+        <td>
+          <label><input type="radio" name="prodi" value="Informatika" required> Informatika</label><br>
+          <label><input type="radio" name="prodi" value="Matematika"> Matematika</label><br>
+          <label><input type="radio" name="prodi" value="Fisika"> Fisika</label><br>
+          <label><input type="radio" name="prodi" value="Kimia"> Kimia</label><br>
+          <label><input type="radio" name="prodi" value="Statistika"> Statistika</label><br>
+          <label><input type="radio" name="prodi" value="Biologi"> Biologi</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Hobi:</td>
+        <td>
+          <label><input type="checkbox" name="hobi[]" value="Futsal"> Futsal</label><br>
+          <label><input type="checkbox" name="hobi[]" value="Badminton"> Badminton</label><br>
+          <label><input type="checkbox" name="hobi[]" value="Membaca"> Membaca</label><br>
+          <label><input type="checkbox" name="hobi[]" value="Menulis"> Menulis</label><br>
+          <label><input type="checkbox" name="hobi[]" value="Travelling"> Travelling</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td>
+          <input type="password" name="password" required>
+          <br><small>Hint: min 8 karakter, ada huruf besar, kecil, dan angka</small>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button type="submit">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
