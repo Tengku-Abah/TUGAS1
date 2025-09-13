@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi - PBP Minggu 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .form-wrapper {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .grup-input { margin-bottom: 20px; }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        .radio-grup, .checkbox-grup { margin-top: 8px; }
+        .submit-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover { background: #45a049; }
+    </style>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h2>Form Registrasi Mahasiswa</h2>
+
+        <form action="validate.php" method="POST">
+            <div class="grup-input">
+                <label for="username">Nama Pengguna *</label>
+                <input type="text" id="username" name="username" placeholder="Hanya huruf, tanpa angka" required>
+            </div>
+
+            <div class="grup-input">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email anda" required>
+            </div>
+
+            <div class="grup-input">
+                <label for="university">Perguruan Tinggi *</label>
+                <input type="text" id="university" name="university" placeholder="Masukkan nama kampus" required>
+            </div>
+
+            <div class="grup-input">
+                <label>Program Studi *</label>
+                <div class="radio-grup">
+                    <div><input type="radio" name="program" value="Informatika" required> Informatika</div>
+                    <div><input type="radio" name="program" value="Matematika"> Matematika</div>
+                    <div><input type="radio" name="program" value="Fisika"> Fisika</div>
+                    <div><input type="radio" name="program" value="Kimia"> Kimia</div>
+                    <div><input type="radio" name="program" value="Statistika"> Statistika</div>
+                    <div><input type="radio" name="program" value="Biologi"> Biologi</div>
+                    <div><input type="radio" name="program" value="Bioteknologi"> Bioteknologi</div>
+                </div>
+            </div>
+
+            <div class="grup-input">
+                <label>Hobi (Opsional)</label>
+                <div class="checkbox-grup">
+                    <div><input type="checkbox" name="hobbies[]" value="Futsal"> Futsal</div>
+                    <div><input type="checkbox" name="hobbies[]" value="Badminton"> Badminton</div>
+                    <div><input type="checkbox" name="hobbies[]" value="Membaca"> Membaca</div>
+                    <div><input type="checkbox" name="hobbies[]" value="Menulis"> Menulis</div>
+                    <div><input type="checkbox" name="hobbies[]" value="Traveling"> Traveling</div>
+                    <div><input type="checkbox" name="hobbies[]" value="Fotografi"> Fotografi</div>
+                </div>
+            </div>
+
+            <div class="grup-input">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Min 8 karakter, 1 huruf besar, 1 kecil, 1 angka" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
 
