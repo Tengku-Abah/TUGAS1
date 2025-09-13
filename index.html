@@ -1,1 +1,178 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Validasi Form Server Side Scripting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        
+        .radio-group, .checkbox-group {
+            margin-top: 8px;
+        }
+        
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            margin-left: 8px;
+            margin-bottom: 8px;
+            display: inline;
+        }
+        
+        .radio-item, .checkbox-item {
+            margin-bottom: 10px;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Registrasi Mahasiswa</h2>
+        
+        <form method="POST" action="process.php">
+            <div class="form-group">
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" 
+                       placeholder="Masukkan username (hanya huruf)">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" 
+                       placeholder="Masukkan email">
+            </div>
+            
+            <div class="form-group">
+                <label for="university">Perguruan Tinggi *</label>
+                <input type="text" id="university" name="university" 
+                       placeholder="Masukkan nama perguruan tinggi">
+            </div>
+            
+            <div class="form-group">
+                <label>Program Studi *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="informatika" name="program" value="Teknik Informatika">
+                        <label for="informatika">Teknik Informatika</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="sistem" name="program" value="Sistem Informasi">
+                        <label for="sistem">Sistem Informasi</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="komputer" name="program" value="Ilmu Komputer">
+                        <label for="komputer">Ilmu Komputer</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="software" name="program" value="Rekayasa Perangkat Lunak">
+                        <label for="software">Rekayasa Perangkat Lunak</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Hobi (opsional)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_membaca" name="hobbies[]" value="Membaca">
+                        <label for="hobby_membaca">Membaca</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_olahraga" name="hobbies[]" value="Olahraga">
+                        <label for="hobby_olahraga">Olahraga</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_musik" name="hobbies[]" value="Musik">
+                        <label for="hobby_musik">Musik</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_gaming" name="hobbies[]" value="Gaming">
+                        <label for="hobby_gaming">Gaming</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_traveling" name="hobbies[]" value="Traveling">
+                        <label for="hobby_traveling">Traveling</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobby_fotografi" name="hobbies[]" value="Fotografi">
+                        <label for="hobby_fotografi">Fotografi</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Min 8 karakter, 1 huruf besar, 1 huruf kecil, 1 angka">
+                <small style="color: #666; font-size: 12px;">
+                    Password harus minimal 8 karakter dengan minimal 1 huruf besar, 1 huruf kecil, dan 1 angka
+                </small>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
