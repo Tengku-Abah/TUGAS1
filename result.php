@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Check if form data exists in session
+// Kondisi untuk mengecek apakah ada data yang di pass ke result.php
 if (!isset($_SESSION['form_data'])) {
     header('Location: index.html');
     exit;
@@ -144,9 +144,10 @@ $formData = $_SESSION['form_data'];
         <a href="index.html" class="new-form-btn">Isi Form Lagi</a>
         
         <?php
-        // Clear session data after displaying
+        // Hapus session setelah data ditampilkan
         unset($_SESSION['form_data']);
         ?>
     </div>
 </body>
 </html>
+
