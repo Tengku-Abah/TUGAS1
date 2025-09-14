@@ -60,7 +60,7 @@ $formData = $_SESSION['form_data'];
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <a href="form.html" style="text-decoration: none;">
+                <a href="index.html" style="text-decoration: none;">
                     <button type="button">Isi Form Lagi</button>
                 </a>
             </td>
