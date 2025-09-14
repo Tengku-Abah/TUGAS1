@@ -1,3 +1,4 @@
+<?php
 /*
 Kelompok 8 // Kelas E
 Tengku muhamad Afif Alghomidy (24060123140165)
@@ -5,8 +6,6 @@ Zoe Mohamed (24060123140182)
 Shakila Tungga Dewi (24060123120025)
 Tsabita Syahida Khafid (24060123130071) 
 */
-
-<?php
 session_start();
 
 $errors = [];
@@ -110,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Berikan alert success
         echo "<script>
                 alert('Form submitted successfully!');
-                window.location.href = 'detail.php';
+                window.location.href = 'result.php';
               </script>";
         exit;
     } else {
