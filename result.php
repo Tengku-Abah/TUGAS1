@@ -44,15 +44,15 @@ $formData = $_SESSION['form_data'];
         </tr>
         <tr>
             <td><strong>Perguruan Tinggi:</strong></td>
-            <td><?= htmlspecialchars($formData['university']) ?></td>
+            <td><?= htmlspecialchars($formData['universitas']) ?></td>
         </tr>
         <tr>
             <td><strong>Program Studi:</strong></td>
-            <td><?= htmlspecialchars($formData['program']) ?></td>
+            <td><?= htmlspecialchars($formData['prodi']) ?></td>
         </tr>
         <tr>
             <td><strong>Hobi:</strong></td>
-            <td><?= !empty($formData['hobbies']) ? implode(', ', array_map('htmlspecialchars', $formData['hobbies'])) : 'Tidak ada' ?></td>
+            <td><?= !empty($formData['hobi']) ? implode(', ', array_map('htmlspecialchars', $formData['hobi'])) : 'Tidak ada' ?></td>
         </tr>
         <tr>
             <td><strong>Password:</strong></td>

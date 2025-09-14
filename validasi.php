@@ -15,9 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get form data
     $username = trim($_POST['username'] ?? '');
     $email = trim($_POST['email'] ?? '');
-    $university = trim($_POST['university'] ?? '');
-    $program = $_POST['program'] ?? '';
-    $hobbies = $_POST['hobbies'] ?? [];
+    $universitas = trim($_POST['universitas'] ?? '');
+    $prodi = $_POST['prodi'] ?? '';
+    $hobi = $_POST['hobi'] ?? [];
     $password = $_POST['password'] ?? '';
     
     // Validation
@@ -54,16 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // 3. Validasi Unviersitas,Universitas tidak boleh kosong
-    if (empty($university)) {
+    if (empty($universitas)) {
         $errors[] = "Perguruan tinggi tidak boleh kosong";
     }
     
     // 4. Validasi program studi,wajib memilih salah satu opsi
-    if (empty($program)) {
+    if (empty($prodi)) {
         $errors[] = "Program studi harus dipilih";
     }
     
-    // 5. Hobi tidak membutuhkan validasi,karena pengisiannya yang optional
+    // 5. Hobi tidak membutuhkan validasi, karena pengisiannya yang optional
     
     // 6. Validasi password dengan ketentuan(minimal 8 karakter, 1 huruf besar, 1 huruf kecil, 1 angka)
     if (empty($password)) {
@@ -102,12 +102,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['form_data'] = [
             'username' => $username,
             'email' => $email,
-            'university' => $university,
-            'program' => $program,
-            'hobbies' => $hobbies,
+            'universitas' => $universitas,
+            'prodi' => $prodi,
+            'hobi' => $hobi,
             'password' => $password
         ];
-        
         // Berikan alert success
         echo "<script>
                 alert('Form submitted successfully!');
